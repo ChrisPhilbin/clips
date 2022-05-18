@@ -44,7 +44,7 @@ export class RegisterComponent {
       confirmPassword: this.confirmPassword,
       phone: this.phone,
     },
-    [RegisterValidators.match]
+    [RegisterValidators.match('password', 'confirmPassword')]
   );
 
   async register() {
