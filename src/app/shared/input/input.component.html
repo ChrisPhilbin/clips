@@ -8,7 +8,8 @@
 />
 <ng-container *ngIf="control.dirty && control.touched">
   <p class="text-red-400" *ngIf="control.errors?.pattern">
-    Passwords must be at least 8 characters long, have 1 uppercase letter, 1 lowercase letter, and 1 number.
+    Passwords must be at least 8 characters long, have 1 uppercase letter, 1
+    lowercase letter, and 1 number.
   </p>
   <p *ngIf="control.errors?.required" class="text-red-400">Field is required</p>
   <p *ngIf="control.errors?.minlength" class="text-red-400">
@@ -19,5 +20,10 @@
   </p>
   <p class="text-red-400" *ngIf="control.errors?.min">Value too low.</p>
   <p class="text-red-400" *ngIf="control.errors?.max">Value too high.</p>
-  <p class="text-red-400" *ngIf="control.errors?.noMatch">Passwords do not match.</p>
+  <p class="text-red-400" *ngIf="control.errors?.noMatch">
+    Passwords do not match.
+  </p>
+  <p class="text-red-400" *ngIf="control.errors?.emailTaken">
+    Email has already been taken.
+  </p>
 </ng-container>
