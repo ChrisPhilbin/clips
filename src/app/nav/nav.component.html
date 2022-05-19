@@ -3,7 +3,7 @@
     <!-- App Name -->
     <a
       class="text-3xl text-indigo-400 font-bold uppercase mr-4"
-      href="index.html"
+      [routerLink]="['/']"
       >Clipz</a
     >
 
@@ -18,7 +18,13 @@
         </li>
         <ng-template #authLinks>
           <li>
-            <a class="px-2" href="#">Manage</a>
+            <a
+              class="px-2"
+              routerLink="/"
+              routerLinkActive="text-indigo-400 font-bold"
+              [routerLinkActiveOptions]="{ exact: true }"
+              >Manage</a
+            >
           </li>
           <li>
             <a class="px-2" href="#">Upload</a>
@@ -28,7 +34,13 @@
           </li>
         </ng-template>
         <li>
-          <a class="px-2" href="about.html">About</a>
+          <a
+            [routerLink]="['about']"
+            [routerLinkActiveOptions]="{ exact: true }"
+            class="px-2"
+            routerLinkActive="text-indigo-400 font-bold"
+            >About</a
+          >
         </li>
       </ul>
       <!-- Language Switcher -->
