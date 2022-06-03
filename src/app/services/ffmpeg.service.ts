@@ -43,6 +43,9 @@ export class FfmpegService {
         //output
         `output_0${second}.png`
       );
+    });
+
+    await this.ffmpeg.run(...commands);
 
       const screenshots: string[] = [];
 
@@ -58,11 +61,8 @@ export class FfmpegService {
         const screenshotURL = URL.createObjectURL(screenshotBlob);
 
         screenshots.push(screenshotURL);
-
-        return screenshots;
       });
-    });
 
-    await this.ffmpeg.run(...commands);
+      return screenshots;
   }
 }
