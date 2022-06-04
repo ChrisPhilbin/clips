@@ -15,6 +15,7 @@ import { VideoModule } from './video/video.module';
 import { ClipComponent } from './clip/clip.component';
 import { NotFoundComponent } from './notfound/notfound.component';
 import { AngularFireStorageModule } from '@angular/fire/compat/storage';
+import { ListComponent } from './clips/list/list.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { AngularFireStorageModule } from '@angular/fire/compat/storage';
     AboutComponent,
     ClipComponent,
     NotFoundComponent,
+    ListComponent,
   ],
   imports: [
     BrowserModule,
