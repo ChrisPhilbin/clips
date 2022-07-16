@@ -89,9 +89,9 @@ export class ClipService {
       query = query.startAfter(lastDoc);
     }
 
-    const snapShot = await query.get();
+    const snapshot = await query.get();
 
-    snapShot.forEach((doc) => {
+    snapshot.forEach((doc) => {
       this.pageClips.push({
         docID: doc.id,
         ...doc.data(),
